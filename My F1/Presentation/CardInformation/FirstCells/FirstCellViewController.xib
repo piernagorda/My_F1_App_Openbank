@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="datacell1" id="KGk-i7-Jjw" customClass="FirstCellViewController" customModule="My_F1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oeF-2h-nEK">
+                        <rect key="frame" x="16" y="10" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="YKZ-yP-ru9"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gz8-db-Lkp">
+                        <rect key="frame" x="104" y="11" width="206" height="59"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pba-ol-KkX">
+                                <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CircuitName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIo-mr-vIC">
+                                <rect key="frame" x="0.0" y="21" width="80" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kca-ml-uEX">
+                                <rect key="frame" x="0.0" y="42" width="28.666666666666668" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Gz8-db-Lkp" secondAttribute="trailing" constant="10" id="5wU-0Z-jlm"/>
+                    <constraint firstAttribute="bottom" secondItem="oeF-2h-nEK" secondAttribute="bottom" constant="10" id="EUz-cb-EMr"/>
+                    <constraint firstItem="Gz8-db-Lkp" firstAttribute="leading" secondItem="oeF-2h-nEK" secondAttribute="trailing" constant="8" id="K7H-oU-hfm"/>
+                    <constraint firstItem="Gz8-db-Lkp" firstAttribute="leading" secondItem="oeF-2h-nEK" secondAttribute="trailing" constant="8" id="V5A-CE-Ciw"/>
+                    <constraint firstItem="Gz8-db-Lkp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Vpl-lf-aLo"/>
+                    <constraint firstItem="oeF-2h-nEK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kyp-mX-CJm"/>
+                    <constraint firstAttribute="bottom" secondItem="Gz8-db-Lkp" secondAttribute="bottom" constant="10" id="sH5-Lc-Tx3"/>
+                    <constraint firstItem="oeF-2h-nEK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="yEt-kK-9WQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="circuitName" destination="KIo-mr-vIC" id="K1C-Na-7Ti"/>
+                <outlet property="countryImage" destination="oeF-2h-nEK" id="E3L-8I-Pze"/>
+                <outlet property="countryName" destination="Pba-ol-KkX" id="nkp-lj-pe6"/>
+                <outlet property="year" destination="Kca-ml-uEX" id="uPl-Mv-Kfj"/>
+            </connections>
+            <point key="canvasLocation" x="105.34351145038167" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+</document>
